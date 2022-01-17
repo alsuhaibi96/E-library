@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --nav-footer-color:#f9fafc;
+}
+
+html{
+}
+
+body{
+    color: black;
+    font-weight: 500;
+}
+nav{
+    background-color: var(--nav-footer-color);
+    border-bottom:  1px groove rgb(184, 182, 182);
+
+}
+
+ol{
+    
+    display: flex;
+}
+li{
+list-style: none;
+}
+
+.sauid-icon,.translate-icon ,svg{
+    padding-right: 10px;
+ 
+}
+
+
+li{
+    border-left:  1px groove rgb(184, 182, 182);
+    padding: 10px 10px 10px 40px;
+
+}
+li:last-child{
+border: none;
+}
+a{
+text-decoration: none;
+color: black;
+}
