@@ -1,3 +1,8 @@
+/*Java script tha runs in the whole project*/
+
+
+
+/*Displaying and navigating between slides in the category page*/
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -23,4 +28,23 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+}
+
+/*Displaying and hiding modals "Sign in Modal" and " Sign up modal"*/
+const showloginModal=modal=>{
+  document.getElementById("login-modal-container").style.display="block";
+}
+const hideloginModal=hide=>
+{
+  document.getElementById("login-modal-container").style.display="none";
+
+}
+const showSigninModal=modal=>{
+  document.getElementById("signin-modal-container").style.display="block";
+}
+const hidesigninModal=hide=>
+{
+  document.getElementById("signin-modal-container").style.display="none";
+  document.getElementById("login-modal-container").style.display="none";
+
 }

@@ -1,16 +1,17 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+
 }
 
 :root{
     --nav-top-color:#f9fafc;
     --footer-dark-color:#333333;
-}
+--input-background:#eff2f7;
+  }
 
-html{
-    box-sizing: border-box;
-}
+
 body{
     color: black;
     font-weight: 500;
@@ -36,10 +37,7 @@ padding: 10px 10px 10px 40px;
     padding-right: 10px;
  
 }
-main{
-    height: 100vh;
 
-}
 
 .nav-li:last-child{
 border: none;
@@ -97,12 +95,13 @@ hr{
     border-bottom-right-radius: 5px;
 padding: 10px;
     border-style: none;
-background-color:#eff2f7 ;
+background-color:var(--input-background);
 }
 .email-icon{
     width: 20%;
     padding: 10px;
-    background-color: #eff2f7;
+    height: 50px;
+    background-color: var(--input-background);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 
@@ -122,69 +121,7 @@ border-radius: 5px;
 input:focus{
     border: none;
 }
-.conatct-us-container{
-}
-/* Footer icons stylr 
-*/
 
-.fa {
-    font-size: 15px;
-  width: 15px;
-  text-align: center;
-    padding: 8px;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
-  .contact-us-container a{
-      color: white;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-  }
-
-  .fa-linkedin {
-    background: #007bb5;
-  }
-  
-  .fa-youtube {
-    background: #bb0000;
-  }
-  
-  .fa-instagram {
-    background: #f09433; 
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-  }
-
-  
-  .fa-snapchat-ghost {
-    background: #fffc00;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
-.footer-second-block-container ul{
-
-}
-.footer-container ul li{
-list-style: none;
-margin-bottom: 10px;
-}
-.footer-container a{
-    color: white;
-    text-decoration: none;
-
-}
 h4,hr, .footer-container ul li a{
     opacity: 0.7;
 }
@@ -217,6 +154,11 @@ h4,hr, .footer-container ul li a{
 img {vertical-align: middle;}
 
 
+.slideshow-outer-container{
+  position: relative;
+  padding: 50px;
+
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -310,3 +252,350 @@ img {vertical-align: middle;}
   @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
   }
+
+
+
+  
+  /* Log in and Sign in modals Style*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* Login in style*/
+
+  .login-modal-container{
+ height: 100vh;
+ width: 100vw;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.3);
+padding-top: 100px;
+display: none;
+  }
+  .login-modal-content{
+    background-color: white;
+    margin: auto;
+    width: 30%;
+    height: auto;
+    padding: 50px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+
+  }
+  .close-login-modal,.close-signin-modal{
+    position: absolute;
+    top: 10px;
+right: 20px;
+background-color: inherit;
+border-style: none;
+font-size: 18px;
+opacity: 0.5;
+cursor: pointer;
+  }
+  .login-container{
+  
+    width: 100%;
+  }
+  .form-hr{
+    width: 400px;
+  }
+  #login{
+   width: 100%; 
+   padding-top: 20px;
+  }
+  .login-caption,.register-caption{
+  text-align: center;
+  }
+  .login-email,.login-pass,.login-btn{
+    padding: 15px;
+  
+  }
+  .login-email,.login-btn{
+    width: 100%;
+    border-radius: 5px;
+  }
+  .login-input-container{
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .login-pass{
+width: 80%;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+
+  }
+  .forgot-pass{
+    width: 20%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+color: rgb(15, 15, 207);
+font-weight: 500;
+font-size: 18px;
+cursor: pointer;
+  }
+  .login-email,.login-pass,.forgot-pass{
+background-color: 
+var(--input-background);
+border-style: none;
+
+
+}
+.login-btn{
+  background-color: #d3060a;
+  color: white;
+border-style: none;
+font-size: 18px;
+
+}
+.dont-have-account-container{
+  padding-top: 50px;
+  margin: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.dont-have-account{
+padding: 0px 25px;
+margin-bottom: 15px;
+text-align: center;
+
+}
+.create-new-account{
+  cursor: pointer;
+  padding: 15px 30px;
+  text-align: center;
+  box-shadow: 5px 5px 5px 5px rgba(221, 221, 221, 0.933);
+}
+
+/* Sign in style*/
+
+.signin-modal-container{
+  height: 100vh;
+  width: 100vw;
+     position: absolute;
+     top: 0;
+     background-color: rgba(0,0,0,0.3);
+ padding-top: 100px;
+z-index: 1;
+display: none;
+}
+
+.signin-content-container{
+  background-color: white;
+  margin: auto;
+  width: 30%;
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+.signin-form-container{
+  width: 100%;
+  padding-top: 20px;
+}
+.signin-input-container input{
+  background-color: 
+var(--input-background);
+border-style: none;
+padding: 2px  10px 20px 15px;
+border-radius: 5px;
+margin-bottom: 10px;
+width: 100%;
+font-size: 15px;
+font-weight: 500;
+
+}
+.signin-row-container{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.signin-phonenumber{
+  width: 68%;
+  background-color: 
+  var(--input-background);
+  border-style: none;
+  padding:10px  15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.signin-countrycode{
+  width: 30%;
+  height: 40px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: 
+  var(--input-background);
+}
+#signin-register-code{
+  text-align: center;
+  background-color: #e5e8ee;
+}
+input [type="checkbox"]{
+  width: 30px;
+}
+
+
+/* The checkbox container */
+.signin-checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.signin-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+}
+
+/* Create a custom checkbox */
+.signin-checkmark {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.signin-checkbox-container:hover input ~ .signin-checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.signin-checkbox-container input:checked ~ .signin-checkmark {
+  background-color: #1b70b6;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.signin-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.signin-checkbox-container input:checked ~ .signin-checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.signin-checkbox-container .signin-checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.signin-agree,.signin-register-news{
+  margin-right: 35px;
+font-size: 15px;
+opacity: 0.6;
+}
+
+.signin-create-account{
+  background-color: #e5e8ee;
+font-weight: 700;
+  border-radius: 5px;
+  border-style: none;
+  width: 100%;
+  padding: 15px;
+
+}
+
+button{
+  cursor: pointer;
+}
+.signin-have-account{
+  margin: auto;
+  padding: 20px 10px;
+  width: 60%;
+}
+/* Footer icons style
+*/
+
+.fa {
+  font-size: 20px;
+width: 30px;
+text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50% !important;
+}
+.contact-us-container a{
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+}
+
+.fa-youtube {
+  background: #bb0000;
+}
+
+.fa-instagram {
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.footer-container ul li{
+list-style: none;
+margin-bottom: 10px;
+}
+.footer-container a{
+  color: white;
+  text-decoration: none;
+
+}
