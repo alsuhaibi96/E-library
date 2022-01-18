@@ -40,6 +40,7 @@ const hideloginModal=hide=>
 
 }
 const showSigninModal=modal=>{
+  document.getElementById("login-modal-container").style.display="none";
   document.getElementById("signin-modal-container").style.display="block";
 }
 const hidesigninModal=hide=>
@@ -47,4 +48,8 @@ const hidesigninModal=hide=>
   document.getElementById("signin-modal-container").style.display="none";
   document.getElementById("login-modal-container").style.display="none";
 
+}
+const showloginModalAgain=showLogin=>{
+  document.getElementById("signin-modal-container").style.display="none";
+  document.getElementById("login-modal-container").style.display="block";
 }

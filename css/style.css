@@ -138,30 +138,7 @@ h4,hr, .footer-container ul li a{
 .form-hr{
     width: 280px;
 }
-@media only  screen and (max-width:767px){
-    .contact-us-container{
-        margin: 20px 0px;
-    }
-    .nav-li a{
-    
-      padding-right: 0px;
-      }
-    .nav-ol{
-    
-        flex-direction: column;
-    }
-    .footer-container{
-  
-      display: grid;
-      grid-template-columns: 100%;
-    padding-bottom: 5px;
-   
-    }
-    .form-hr{
-     display: none;
-  }
 
-}
 
 /*Slider style*/
 .mySlides {display: none}
@@ -286,7 +263,7 @@ input[type=number] {
 /* Login in style*/
 
   .login-modal-container{
- height: 100vh;
+ height: 100%;
  width: 100vw;
     position: absolute;
     top: 0;
@@ -385,9 +362,11 @@ text-align: center;
 
 }
 .create-new-account{
+  border-style: none;
   cursor: pointer;
   padding: 15px 30px;
   text-align: center;
+  background-color: white;
   box-shadow: 5px 5px 5px 5px rgba(221, 221, 221, 0.933);
 }
 
@@ -612,4 +591,38 @@ margin-bottom: 10px;
   color: white;
   text-decoration: none;
 
+}
+
+/*Responsivness using media query*/
+
+@media only  screen and (max-width:767px){
+  .contact-us-container{
+      margin: 20px 0px;
+  }
+  .nav-li a{
+  
+    padding-right: 0px;
+    }
+  .nav-ol{
+  
+      flex-direction: column;
+  }
+  .footer-container{
+
+    display: grid;
+    grid-template-columns: 100%;
+  padding-bottom: 5px;
+ 
+  }
+  .form-hr{
+   display: none;
+}
+.login-modal-content{
+ 
+  width: 90%;
+
+}
+.signin-content-container{
+  width: 90%;
+}
 }
