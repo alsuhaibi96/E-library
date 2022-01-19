@@ -8,10 +8,13 @@
 :root{
   --active-circle-bgcolor:#3e60d1;
 --unactive-circle-bgcolor:#ebebeb;
---done-circel-bgcolor:white;
+--done-circle-bgcolor:white;
     --nav-top-color:#f9fafc;
     --footer-dark-color:#333333;
 --input-background:#eff2f7;
+--borderWidth: 5px;
+--height: 40px;
+--width: 18px;
   }
 
 
@@ -304,7 +307,7 @@ cursor: pointer;
    width: 100%; 
    padding-top: 20px;
   }
-  .login-caption,.register-caption,.psersonal-info-caption{
+  .login-caption,.register-caption,.psersonal-info-caption,.payment-method-caption{
   text-align: center;
   }
   .login-email,.login-pass,.login-btn{
@@ -393,12 +396,12 @@ display: none;
   border-radius: 5px;
   position: relative;
 }
-.signin-form-container,.personal-info-form{
+.signin-form-container,.personal-info-form,.payment-form-container{
   width: 100%;
   padding-top: 20px;
 }
 .signin-input-container input,
-.buyer-countrycode,.personal-info-form input{
+.buyer-countrycode,.personal-info-form input,.payment-form-container input{
   background-color: 
 var(--input-background);
 border-style: none;
@@ -608,6 +611,7 @@ margin-bottom: 10px;
 display: block;
 }
 
+
 .hidePaymentclass{
 display: none;
 }
@@ -630,7 +634,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 color: black;
-
+font-weight: 600;
 }
 .circle.is-active{
     background-color: var(--active-circle-bgcolor);
@@ -674,11 +678,11 @@ button{
 
   }
 
-  .payment-personal-info-container{
+  .payment-personal-info-container,.payment-method-container,.payment-done-container{
       margin: auto;
   width: 100%;
   }
-.personal-info-form-container{
+.personal-info-form-container,.payment-form-container,.payment-done-inner-container{
   margin: auto;
   box-shadow: 5px 5px 5px 10px rgba(221, 221, 221, 0.933);
   width: 30%;
@@ -686,34 +690,123 @@ button{
   margin-bottom: 20px;
 
 }
-.personal-info-form input{
+.personal-info-form input ,.payment-method input{
   padding: 8px  8px 20px 15px;
 
 }
 
-.buyer-row-container{
+.buyer-row-container,.payment-row-container{
   display: flex;
 gap: 10px;
 }
-.personal-info-form label{
-  font-size: 20px;
+.personal-info-form label , .payment-method label{
+  font-size: 18px;
   margin-right: 5px;
+  margin-bottom: 2px;
 }
-.payment-save-address{
+.payment-savebtn-container,.payment-method-savebtn-container{
+  margin: auto;
+  width: 50%;
+}
+.payment-save-address,.payment-save-method-info{
   border-style: none;
   padding: 15px;
 width: 100%;
 border-radius: 5px;
 background-color: var(--active-circle-bgcolor);
 color: white;
+margin-top: 10px;
+font-size: 20px;
 }
-.payment-savebtn-container{
-  margin: auto;
-  width: 50%;
-}
+
 .showPaynmentclass{
   display: block;
 
+}
+.sign-check-container{
+  text-align: center;  
+  padding: 15px;
+  background-color: white;
+  width: 20%;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid var(--active-circle-bgcolor);
+}
+.sign-check{
+
+  border-radius: 2px;
+  display: inline-block;
+  height: var(--height);
+  width: var(--width);
+  transform: rotate(45deg);
+  border-bottom:var(--borderWidth) solid  var(--active-circle-bgcolor);
+border-right: var(--borderWidth) solid  var(--active-circle-bgcolor);
+}
+.done-payment-caption{
+  text-align: center;
+}
+.done-payment-paragraph-container{
+  padding: 20px 0px;
+  margin: auto;
+  width: 60%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.payment-done-line{
+      height: 2px;
+    width: 100px;
+    border: 0;
+    border-top: 2px solid rgb(211, 49, 49);
+    margin-right: 15px;
+
+}
+
+.payment-details-caption{
+  margin-top: 20px;
+  margin-right: 15px;
+}
+.payment-details-container{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.payment-details-row{
+display: flex;
+  gap: 15px;
+}
+.payment-details-row:not(:last-of-type){
+  gap: 35px;
+}
+.payment-done-inner-container p,span{
+opacity: 0.8;
+
+
+}
+.payment-done-inner-container span,label
+{
+  font-size: 18px;
+}
+.payment-btn-container{
+  margin: auto;
+  width: 30%;
+  margin-top: 50px;
+}
+.payment-done-btn{
+  text-align: center;
+  border-style: none;
+  padding: 15px 50px;
+border-radius: 5px;
+font-size: 20px;
+background-color: var(--active-circle-bgcolor);
+color: white;
+}
+.payment-done-email{
+  opacity: 100%;
+  font-weight: 600;
+  text-decoration: none;
+color: black;
 }
 
 /*Responsivness using media query*/
@@ -757,7 +850,7 @@ color: white;
   width: 70vw;
 }
 
-.personal-info-form-container{
+.personal-info-form-container,.payment-form-container{
   margin: auto;
   width: 80%;
 
