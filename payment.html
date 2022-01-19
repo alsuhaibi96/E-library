@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Payment</title>
+</head>
+
+<body>
+    <section>
+        <div class="progress-container" dir="rtl">
+            <div class="progress-line">
+                <button class="circle is-active">
+                    1
+                </button>
+                <button class="circle">
+                    2
+                </button>
+                <button class="circle">
+                    3
+                </button>
+
+            </div>
+            <!-- <div class="btns-container">
+<button class="next-btn">التالي</button>
+<button class="previous-btn">السابق</button>
+
+    </div> -->
+            <div class="payment-personal-info-container">
+                <div class="personal-info-form-container">
+                    <h2 class="psersonal-info-caption">بياناتك وعنوانك</h2>
+                    <form class="personal-info-form" id="personal-info-from">
+
+                        <label>المنطقة / الدولة</label><br>
+
+
+                        <select class="buyer-countrycode">
+                            <option value="">
+
+                                اليمن
+                            </option>
+
+                            <option>
+                                مصر
+                            </option>
+
+                        </select>
+
+                        <div class="buyer-input-container" style="margin-top: 8px;">
+
+                            <label>الاسم الكامل (الاول واللقب)</label><br>
+                            <input id="#buyer-full-name" type="text" class="">
+                            <br>
+
+
+                            <label>رقم الهاتف</label><br>
+
+                            <input id="#buyer-phonenumber" type="number" class="">
+                            <br>
+                            <label> العنوان</label><br>
+
+                            <input id="#buyer-address" placeholder="عنوان الشارع" type="text" class="">
+                            <br>
+                    
+                            <input id="#buyer-apt-no" type="number" class="" placeholder="رقم الطابق , الشقة">
+                            <br>
+                            <div class="buyer-row-container">
+                                <div>
+                                <label >المدينة</label>
+                                <input id="#buyer-city" type="text" class="">
+                            </div>
+                            <div>
+                                <label>المنطقة</label>
+                                                                <input id="#buyer-distinct" type="text" class="">
+                                                            </div>
+
+                               <div>
+                                                   <label>كود ZIP</label>             <input id="#buyer-zip-code" type="number" class="">
+                                                            </div>
+                            </div>
+
+
+                        </div>
+
+                        <label class="payment-checkbox-container">
+                            <span class="payment-agree" >اجعل هذا عنواني الرئيسي</span>
+                            <input type="checkbox">
+
+                            <br>
+                            <span class="payment-checkmark"></span>
+                        </label>
+
+
+                    </form>
+                    
+<div class="payment-savebtn-container">
+    <button  class="next-btn payment-save-address">حفظ</button>
+</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+  
+    <script src="js/payment-file.js"></script>
+</body>
+
+</html>

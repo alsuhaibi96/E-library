@@ -6,6 +6,9 @@
 }
 
 :root{
+  --active-circle-bgcolor:#3e60d1;
+--unactive-circle-bgcolor:#ebebeb;
+--done-circel-bgcolor:white;
     --nav-top-color:#f9fafc;
     --footer-dark-color:#333333;
 --input-background:#eff2f7;
@@ -26,7 +29,7 @@ nav{
 .nav-ol{
     
     display: flex;
-    flex-wrap: wrap;
+
 }
 .nav-li{
 list-style: none;
@@ -46,7 +49,6 @@ border: none;
 .nav-li a{
 text-decoration: none;
 color: black;
-padding-right: 5px;
 }
 footer{
  
@@ -62,7 +64,6 @@ grid-template-columns: 25% 18% 18% 18% 20%;
 padding-bottom: 5px; */
 gap: 10px;
 display: flex;
-flex-wrap: wrap;
 }
 /* .footer-first-block-container{
     width: 100%;
@@ -78,7 +79,7 @@ justify-content: space-between;
 hr{
     display: block;
     height: 1px;
-    width: 220px;
+    width: 200px;
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
@@ -136,7 +137,7 @@ h4,hr, .footer-container ul li a{
     opacity: 100%;
 }
 .form-hr{
-    width: 280px;
+    width: 240px;
 }
 
 
@@ -303,7 +304,7 @@ cursor: pointer;
    width: 100%; 
    padding-top: 20px;
   }
-  .login-caption,.register-caption{
+  .login-caption,.register-caption,.psersonal-info-caption{
   text-align: center;
   }
   .login-email,.login-pass,.login-btn{
@@ -392,11 +393,12 @@ display: none;
   border-radius: 5px;
   position: relative;
 }
-.signin-form-container{
+.signin-form-container,.personal-info-form{
   width: 100%;
   padding-top: 20px;
 }
-.signin-input-container input{
+.signin-input-container input,
+.buyer-countrycode,.personal-info-form input{
   background-color: 
 var(--input-background);
 border-style: none;
@@ -440,7 +442,7 @@ input [type="checkbox"]{
 
 
 /* The checkbox container */
-.signin-checkbox-container {
+.signin-checkbox-container,.payment-checkbox-container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -455,7 +457,7 @@ input [type="checkbox"]{
 }
 
 /* Hide the browser's default checkbox */
-.signin-checkbox-container input {
+.signin-checkbox-container input ,.payment-checkbox-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -465,7 +467,7 @@ input [type="checkbox"]{
 }
 
 /* Create a custom checkbox */
-.signin-checkmark {
+.signin-checkmark ,.payment-checkmark{
   position: absolute;
   top: 5px;
   right: 0;
@@ -476,7 +478,7 @@ input [type="checkbox"]{
 }
 
 /* On mouse-over, add a grey background color */
-.signin-checkbox-container:hover input ~ .signin-checkmark {
+.signin-checkbox-container:hover input ~ .signin-checkmark,.payment-checkbox-container :hover input ~ .payment-checkmark {
   background-color: #ccc;
 }
 
@@ -484,21 +486,26 @@ input [type="checkbox"]{
 .signin-checkbox-container input:checked ~ .signin-checkmark {
   background-color: #1b70b6;
 }
+.payment-checkbox-container input:checked ~ .payment-checkmark{
+  background-color: #1b70b6;
+
+}
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.signin-checkmark:after {
+.signin-checkmark:after ,.payment-checkmark:after{
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the checkmark when checked */
-.signin-checkbox-container input:checked ~ .signin-checkmark:after {
+.signin-checkbox-container input:checked ~ .signin-checkmark:after,
+.payment-checkbox-container input:checked ~ .payment-checkmark:after  {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.signin-checkbox-container .signin-checkmark:after {
+.signin-checkbox-container .signin-checkmark:after,.payment-checkbox-container .payment-checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -509,7 +516,7 @@ input [type="checkbox"]{
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.signin-agree,.signin-register-news{
+.signin-agree,.signin-register-news,.payment-agree{
   margin-right: 35px;
 font-size: 15px;
 opacity: 0.6;
@@ -593,6 +600,122 @@ margin-bottom: 10px;
 
 }
 
+
+
+
+/*Payment page style */
+.payment-personal-info-container{
+display: block;
+}
+
+.hidePaymentclass{
+display: none;
+}
+.progress-container{
+    height: 500px;
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin: auto;
+width: 100%;
+padding-top: 5px;
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:2px solid #0000;
+    background-color: var(--unactive-circle-bgcolor);
+display: flex;
+align-items: center;
+justify-content: center;
+color: black;
+
+}
+.circle.is-active{
+    background-color: var(--active-circle-bgcolor);
+    color: white;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--active-circle-bgcolor);
+
+}
+.circle.is-active:not(:last-of-type)::after{
+    background-color: var(--active-circle-bgcolor);
+}
+.progress-line{
+    width: 42vw;
+margin: 2rem auto ;
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.circle:not(:last-of-type)::after{
+    content: '';
+    transform: translateX(-50%);
+    position: absolute;
+    height: 6px;
+    width: calc(100vw/5);
+    
+    background-color: var(--unactive-circle-bgcolor);
+    z-index: -1;
+
+}
+
+.btns-container{
+   
+    margin: auto;
+}
+button{
+    cursor: pointer;
+}
+.buyer-countrycode{
+    height: 40px;
+
+  }
+
+  .payment-personal-info-container{
+      margin: auto;
+  width: 100%;
+  }
+.personal-info-form-container{
+  margin: auto;
+  box-shadow: 5px 5px 5px 10px rgba(221, 221, 221, 0.933);
+  width: 30%;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+.personal-info-form input{
+  padding: 8px  8px 20px 15px;
+
+}
+
+.buyer-row-container{
+  display: flex;
+gap: 10px;
+}
+.personal-info-form label{
+  font-size: 20px;
+  margin-right: 5px;
+}
+.payment-save-address{
+  border-style: none;
+  padding: 15px;
+width: 100%;
+border-radius: 5px;
+background-color: var(--active-circle-bgcolor);
+color: white;
+}
+.payment-savebtn-container{
+  margin: auto;
+  width: 50%;
+}
+.showPaynmentclass{
+  display: block;
+
+}
+
 /*Responsivness using media query*/
 
 @media only  screen and (max-width:767px){
@@ -605,9 +728,11 @@ margin-bottom: 10px;
     }
   .nav-ol{
   
-      flex-direction: column;
+    flex-wrap: wrap;
+       flex-direction: column;
   }
   .footer-container{
+    flex-wrap: wrap;
 
     display: grid;
     grid-template-columns: 100%;
@@ -624,5 +749,23 @@ margin-bottom: 10px;
 }
 .signin-content-container{
   width: 90%;
+}
+
+/*Payment page style */
+
+.progress-line{
+  width: 70vw;
+}
+
+.personal-info-form-container{
+  margin: auto;
+  width: 80%;
+
+}
+.circle:not(:last-of-type)::after{
+  transform: translateX(-50%);
+
+  width: calc(100vw/3);
+
 }
 }
