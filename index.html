@@ -83,7 +83,32 @@
 
         </nav>
     </header>
+
+
+    <!-- Main Content-->
     <main>
+        <!-- Search and Cart-->
+        <section>
+<div class="serach-cart-container">
+    <div class="logo">
+        <a href="index.html"><img src="assets/images/logo.svg" alt="BookStore"></a>
+    </div>
+
+    <form action="">
+        <div class="search">
+            <input type="text" class="search__input" placeholder="البحث">
+            <button class="search__btn"><img src="assets/images/icon/search.svg" alt="بحث"></button>
+        </div>
+    </form>  
+    
+    <div class="cart">
+        <a href="cart.html"><img src="assets/images/icon/cart-1.svg" class="cart__icon" alt="السلّة"></a>
+        <span class="notficatio" id="cart"></span>
+    </div>
+
+</div>
+        </section>
+
         <section>
             <div class="slideshow-outer-container">
 
@@ -118,7 +143,437 @@
             </div>
         </section>
 
-        <main>
+
+        <!-- Category   -->
+
+        <section>
+            <header class="header">
+                <h1 class="header__title">تصفح حسب القسم</h1>
+            </header>
+            <div class="category">
+                <div class="category__prev">
+                    <a><img src="assets/images/icon/arrow.svg" alt="السابق"></a>
+                </div>
+                <article class="category__item">
+                    <img src="assets/images/icon/debt.svg" class="category__img" alt="دين">
+                    <a href="category.html" class="category__title category__title--brown">دين</a>
+                </article>
+                <article class="category__item">
+                    <img src="assets/images/icon/history.svg" class="category__img" alt="تاريخ">
+                    <a href="category.html" class="category__title category__title--orange">تاريخ</a>
+                </article>
+                <article class="category__item">
+                    <img src="assets/images/icon/novels.svg" class="category__img" alt="روايات">
+                    <a href="category.html" class="category__title category__title--purple">روايات</a>
+                </article>
+                <article class="category__item">
+                    <img src="assets/images/icon/policy.svg" class="category__img" alt="سياسة">
+                    <a href="category.html" class="category__title category__title--fuchsia">سياسة</a>
+                </article>
+                <article class="category__item">
+                    <img src="assets/images/icon/economie.svg" class="category__img" alt="اقتصاد">
+                    <a href="category.html" class="category__title category__title--blue">اقتصاد</a>
+                </article>
+                <article class="category__item">
+                    <img src="assets/images/icon/cooking.svg" class="category__img" alt="طبخ">
+                    <a href="category.html" class="category__title category__title--green">طبخ</a>
+                </article>
+                <article class="category__item">
+                    <img src="assets/images/icon/education.svg" class="category__img" alt="تربية">
+                    <a href="category.html" class="category__title category__title--pink">تربية</a>
+                </article>
+                <div class="category__next">
+                    <a><img src="assets/images/icon/arrow.svg" class="category__arrow--next" alt="التالي"></a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Advertisement  -->
+    <section>
+        <div class="advertisement">
+            <article class="advertisement__item">
+                <a href="#"><img src="assets/images/advertisement/1.jpg" class="advertisement__img" alt=""></a>
+            </article>
+            <article class="advertisement__item">
+                <a href="#"><img src="assets/images/advertisement/2.jpg" class="advertisement__img" alt=""></a>
+            </article>
+            <article class="advertisement__item">
+                <a href="#"><img src="assets/images/advertisement/3.jpg" class="advertisement__img" alt=""></a>
+            </article>
+            <article class="advertisement__item">
+                <a href="#"><img src="assets/images/advertisement/4.jpg" class="advertisement__img" alt=""></a>
+            </article>
+            <article class="advertisement__item advertisement__item--main">
+                <a href="#"><img src="assets/images/advertisement/5.jpg" class="advertisement__img" alt=""></a>
+            </article>
+        </div>
+    </section>
+
+<br>
+<br>
+
+       <!-- Offers  -->
+       <section>
+        <header class="header">
+            <h1 class="header__title">العروض الحالية</h1>
+            <a href="category.html" class="header__link">عرض الكل</a>
+        </header>
+        <div class="category category--gap">
+            <div class="category__prev">
+                <a href="#"><img src="assets/images/icon/arrow.svg" alt="السابق"></a>
+            </div>
+            <article class="card">
+                <img src="assets/images/product/book1.jpg" class="card__img" alt="صورة الكتاب">
+                <div class="card__info">
+                    <div class="book-type">
+                        <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1>كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                    <div class="book-link">
+                        <span class="book-link--blue">صيغ أخرى:</span>
+                        <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                    </div>
+                    <div class="counter" id="product-1">
+                        <p class="expired"></p>
+                      
+                        <span class="day"></span>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+                        <a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                        <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/images/product/book2.jpg" class="card__img" alt="صورة الكتاب">
+                <div class="card__info">
+                    <div class="book-type">
+                        <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1>كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                    <div class="book-link">
+                        <span class="book-link--blue">صيغ أخرى:</span>
+                        <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                    </div>
+                    <div class="counter" id="product-2">
+                        <p class="expired"></p>
+                   
+                        <span class="day"></span>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                        <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/images/product/book3.jpg" class="card__img" alt="صورة الكتاب">
+                <div class="card__info">
+                    <div class="book-type">
+                        <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1>كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                    <div class="book-link">
+                        <span class="book-link--blue">صيغ أخرى:</span>
+                        <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                        <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/images/product/book4.jpg" class="card__img" alt="صورة الكتاب">
+                <div class="card__info">
+                    <div class="book-type">
+                        <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1>كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                    <div class="book-link">
+                        <span class="book-link--blue">صيغ أخرى:</span>
+                        <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                        <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/images/product/book1.jpg" class="card__img" alt="صورة الكتاب">
+                <div class="card__info">
+                    <div class="book-type">
+                        <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                        <h1>كتاب إلكتروني</h1>
+                    </div>
+                    <div class="rating">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                    </div>
+                    <div class="book-title">
+                        <h1><a href="details.html" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                    </div>
+                    <div class="book-price">
+                        <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                        <p class="book-price__tax">شامل الضرائب</p>
+                    </div>
+                    <div class="book-link">
+                        <span class="book-link--blue">صيغ أخرى:</span>
+                        <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                        <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                    </div>
+                </div>
+            </article>
+            <div class="category__next">
+                <a href="#"><img src="assets/images/icon/arrow.svg" class="category__arrow--next" alt="التالي"></a>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Religious Books-->
+        <section>
+            <header class="header">
+                <h1 class="header__title">الكتب الدينية</h1>
+                <a href="#" class="header__link">عرض الكل</a>
+            </header>
+            <div class="category category--gap">
+                <div class="category__prev">
+                    <a href="#"><img src="assets/images/icon/arrow.svg" alt="السابق"></a>
+                </div>
+                <article class="card">
+                    <img src="assets/images/product/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="card__info">
+                        <div class="book-type">
+                            <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                            <h1>كتاب إلكتروني</h1>
+                        </div>
+                        <div class="rating">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        </div>
+                        <div class="book-title">
+                            <h1><a href="#" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                        </div>
+                        <div class="book-price">
+                            <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                            <p class="book-price__tax">شامل الضرائب</p>
+                        </div>
+                        <div class="book-link">
+                            <span class="book-link--blue">صيغ أخرى:</span>
+                            <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                        </div>
+                        <div class="action">
+                            <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                            <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="assets/images/product/book2.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="card__info">
+                        <div class="book-type">
+                            <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                            <h1>كتاب إلكتروني</h1>
+                        </div>
+                        <div class="rating">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        </div>
+                        <div class="book-title">
+                            <h1><a href="#" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                        </div>
+                        <div class="book-price">
+                            <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                            <p class="book-price__tax">شامل الضرائب</p>
+                        </div>
+                        <div class="book-link">
+                            <span class="book-link--blue">صيغ أخرى:</span>
+                            <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                        </div>
+                        <div class="action">
+                            <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                            <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="assets/images/product/book3.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="card__info">
+                        <div class="book-type">
+                            <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                            <h1>كتاب إلكتروني</h1>
+                        </div>
+                        <div class="rating">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        </div>
+                        <div class="book-title">
+                            <h1><a href="#" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                        </div>
+                        <div class="book-price">
+                            <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                            <p class="book-price__tax">شامل الضرائب</p>
+                        </div>
+                        <div class="book-link">
+                            <span class="book-link--blue">صيغ أخرى:</span>
+                            <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                        </div>
+                        <div class="action">
+                            <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                            <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="assets/images/product/book4.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="card__info">
+                        <div class="book-type">
+                            <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                            <h1>كتاب إلكتروني</h1>
+                        </div>
+                        <div class="rating">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        </div>
+                        <div class="book-title">
+                            <h1><a href="#" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                        </div>
+                        <div class="book-price">
+                            <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                            <p class="book-price__tax">شامل الضرائب</p>
+                        </div>
+                        <div class="book-link">
+                            <span class="book-link--blue">صيغ أخرى:</span>
+                            <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                        </div>
+                        <div class="action">
+                            <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                            <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="assets/images/product/book1.jpg" class="card__img" alt="صورة الكتاب">
+                    <div class="card__info">
+                        <div class="book-type">
+                            <img src="assets/images/icon/type.svg" class="book-type__icon" alt="نوع الكتاب">
+                            <h1>كتاب إلكتروني</h1>
+                        </div>
+                        <div class="rating">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                            <img src="assets/images/icon/rating.svg" class="rating__star" alt="">
+                        </div>
+                        <div class="book-title">
+                            <h1><a href="#" class="book-title__item">وهوى (كتاب إلكتروني)</a></h1>
+                        </div>
+                        <div class="book-price">
+                            <h3 class="book-price__price">24 <span class="book-price__currency">ر.س</span></h3>
+                            <p class="book-price__tax">شامل الضرائب</p>
+                        </div>
+                        <div class="book-link">
+                            <span class="book-link--blue">صيغ أخرى:</span>
+                            <a href="" class="book-link--cyan">كتاب مطبوع</a>
+                        </div>
+                        <div class="action">
+                            <a href="#" class="action__item"><img src="assets/images/icon/star.svg" alt="المفضلة" ></a>
+<a class="action__item js-cart"><img src="assets/images/icon/cart.svg" alt="السلة" ></a>
+                            <a href="#" class="action__item"><img src="assets/images/icon/share.svg" alt="مشاركة" ></a>
+                        </div>
+                    </div>
+                </article>
+                <div class="category__next">
+                    <a href="#"><img src="assets/images/icon/arrow.svg" class="category__arrow--next" alt="التالي"></a>
+                </div>
+            </div>
+        </section>
             <!--
                 Sign in and Login modals
             -->
