@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
     <title>Dhamar Library</title>
 </head>
 
@@ -15,8 +16,8 @@
     <!--
         The Header of the category Page
     -->
-    <header>
-        <nav>
+    <header class="main-header ">
+        <nav id="menu_nav" class=" ">
             <ol class="nav-ol">
                 <li class="nav-li">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="15">
@@ -24,7 +25,7 @@
                         <path
                             d="M4 22a8 8 0 1 1 16 0H4zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z" />
                     </svg>
-                    <a href="#" onclick="showloginModal()">ادخل لحسابك أو سجل الآن </a>
+                    <a href="signin.html" onclick="showloginModal()">ادخل لحسابك أو سجل الآن </a>
                 </li>
                 <li class="nav-li">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="15">
@@ -32,7 +33,7 @@
                         <path
                             d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" />
                     </svg>
-                    <a href="#"> الرئيسية </a>
+                    <a href="index.html"> الرئيسية </a>
                 </li>
                 <li class="nav-li">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="18">
@@ -73,7 +74,7 @@
                 </li>
                 <li class="nav-li">
 
-                    <a href="#"> English <img class="translate-icon" src="assets/images/translation.png" height="15"
+                    <a href="#" onclick="changeLan()"> English <img class="translate-icon" src="assets/images/translation.png" height="15"
                             width="24">
                     </a>
 
@@ -82,33 +83,35 @@
             </ol>
 
         </nav>
+              <!-- Search and Cart-->
+              <section>
+                <div class="serach-cart-container">
+                <i class="fa fa-bars " id="mobile_nav" onclick="toggleMenu()"></i>
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/home - Copy.png" alt="BookStore"></a>
+                    </div>
+                
+                    <form action="">
+                        <div class="search">
+                            <input type="text" class="search__input" placeholder="البحث">
+                            <button class="search__btn"><img src="assets/images/icon/search.svg" alt="بحث"></button>
+                        </div>
+                    </form>  
+                    
+                    <div class="cart">
+                        <a href="cart.html"><img src="assets/images/icon/cart-1.svg" class="cart__icon" alt="السلّة"></a>
+                        <span class="notfication" id="cart"></span>
+                    </div>
+                
+                </div>
+                        </section>
+                
     </header>
 
 
     <!-- Main Content-->
     <main>
-        <!-- Search and Cart-->
-        <section>
-<div class="serach-cart-container">
-    <div class="logo">
-        <a href="index.html"><img src="assets/images/logo.svg" alt="BookStore"></a>
-    </div>
-
-    <form action="">
-        <div class="search">
-            <input type="text" class="search__input" placeholder="البحث">
-            <button class="search__btn"><img src="assets/images/icon/search.svg" alt="بحث"></button>
-        </div>
-    </form>  
-    
-    <div class="cart">
-        <a href="cart.html"><img src="assets/images/icon/cart-1.svg" class="cart__icon" alt="السلّة"></a>
-        <span class="notficatio" id="cart"></span>
-    </div>
-
-</div>
-        </section>
-
+  
         <section>
             <div class="slideshow-outer-container">
 
@@ -577,111 +580,7 @@
             <!--
                 Sign in and Login modals
             -->
-            <section>
-                <div class="login-modal-container" id="login-modal-container">
-
-                    <div class="login-modal-content">
-                        <button class="close-login-modal" onclick="hideloginModal()">x</button>
-                        <h3 class="login-caption">تسجيل الدخول</h3>
-                        <hr class="form-hr">
-                        <form id="login" action="#">
-                            <div class="login-input-container">
-                                <input class="login-email" type="email" placeholder="البريد الإلكتروني أو رقم الجوال">
-                            </div>
-                            <div class="login-input-container">
-                                <input type="password" class="login-pass" placeholder="كلمة السر"><button
-                                    class="forgot-pass">نسيت ؟</button>
-                            </div>
-                            <div class="login-input-container">
-                                <button class="login-btn">تسجيل الدخول</button>
-                            </div>
-                            <div class="dont-have-account-container">
-                                <span class="dont-have-account">ليس لديك حساب؟</span>
-                                <button class="create-new-account" onclick="showSigninModal()">إنشاء حساب جديد</button>
-                            </div>
-                        </form>
-
-
-                    </div>
-                </div>
-
-                <div class="signin-modal-container" id="signin-modal-container">
-                    <div class="signin-content-container">
-                        <button class="close-signin-modal" onclick="hidesigninModal()">x</button>
-                       <h3 class="register-caption">إنشاء حساب</h3>
-                       <hr class="form-hr">
-
-                        <div class="signin-form-container">
-                            <form class="signin-form" id="signin-form">
-
-                                <div class="signin-row-container">
-                                    <input  type="number" class="signin-phonenumber" type="number" placeholder="رقم الجوال">
-                                    <select class="signin-countrycode">
-                                        <option value="">
-                                           
-                                        رمز البلد
-
-                                        </option>
-
-                                        <option>
-                                            +967
-                                        </option>
-
-                                    </select>
-                                </div>
-                                 
-                                    <span style="margin-right: 5px;">سوف نرسل لك <span style="font-weight: 600;">رمز التحقق عن طريق رسالة نصية</span></span>
-                                
-                                    <div class="signin-input-container" style="margin-top: 8px;">
-                                        
-                                    <input id="#signin-register-code" style="  text-align: center;
-                                    background-color: #e5e8ee;padding: 15px;" type="number" placeholder="إرسال رمز التحقق" class="">
-                                    <br>
-
-                                    <input id="#signin-first-name" type="text" placeholder="الاسم الاول" class="">
-                                    <br>
-
-                                    <input id="#signin-last-name" type="text" placeholder="اسم العائلة" class="">
-                                    <br>
-
-                                    <input id="#signin-email" type="email" placeholder="البريد الإلكتروني" class="">
-                                    <br>
-
-                                    <input id="#signin-pass" type="password" placeholder="كلمة السر" class="">
-                                    <br>
-                                    <input id="#signin-retype-pass" type="password" placeholder="تأكيد كلمة السر" class="">
-                                    
-                                   </div>
-                                  
-                                        <label class="signin-checkbox-container">
-                                            <span class="signin-agree">أوافق على  </span><a href="" style="text-decoration: none;font-size: 15px;">الشروط والأحكام</a>
-                                            <input type="checkbox">
-                                      
-                                            <br>
-                                            <span class="signin-checkmark"></span>
-                                          </label>
-
-                                          <label class="signin-checkbox-container">
-                                            <span class="signin-register-news">التسجيل للانظمام للنشرة البريدية</span>
-                                            <input type="checkbox">
-                                          
-                                            <span class="signin-checkmark"></span>
-                                          </label>
-                                    
-                                  
-                            
-                                    <button type="submit" class="signin-create-account">إنشاء حساب</button>
-<div class="signin-have-account">
-    <span>لديك حساب؟</span><a href="#" style="text-decoration: none; color: blue;" onclick="showloginModalAgain()"> تسجيل الدخول </a>
-</div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
+          
         </main>
 
 

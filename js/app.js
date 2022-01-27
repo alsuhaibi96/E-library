@@ -1,6 +1,16 @@
 /*Java script tha runs in the whole project*/
 
+//Toggle nav
+function toggleMenu(){
+const menuNav=document.getElementById('menu_nav');
+if(menuNav.style.display==='none'){
+  menuNav.style.display='block';
+}
+else{
+  menuNav.style.display='none';
 
+}
+}
 
 /*Displaying and navigating between slides in the category page*/
 var slideIndex = 1;
@@ -34,6 +44,7 @@ function showSlides(n) {
 const showloginModal=modal=>{
   document.getElementById("login-modal-container").style.display="block";
 }
+
 const hideloginModal=hide=>
 {
   document.getElementById("login-modal-container").style.display="none";
@@ -55,3 +66,32 @@ const showloginModalAgain=showLogin=>{
 }
 
 
+//Cart Counting
+const cartCounter   = document.getElementById('cart');
+const carts         = document.querySelectorAll('.js-cart');
+
+let storeCart = localStorage.getItem('cart_counter');
+let counter   = 0;
+
+const addToCart = () =>
+{
+    storeCart = storeCart === null ? 0 : storeCart;
+    counter   = storeCart;
+
+    counter !== 0 ? cartCounter.style.display = "block" : cartCounter.style.display = "none";
+
+    cartCounter.innerText = counter > 9 ? "9+" : counter;
+
+    carts.forEach (element => 
+        {
+            element.addEventListener('click' , (e) => 
+            {
+                counter !== 0 ? cartCounter.style.display = "block" : cartCounter.style.display = "none";
+                counter++;
+                cartCounter.innerText = counter > 9 ? "9+" : counter;
+                localStorage.setItem('cart_counter', counter)
+            })
+    });
+};
+
+window.addEventListener("load", addToCart);
