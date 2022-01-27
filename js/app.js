@@ -95,3 +95,34 @@ const addToCart = () =>
 };
 
 window.addEventListener("load", addToCart);
+//Change language
+
+
+const changeLang  = document.querySelectorAll('.js-language');
+const htmlElement = document.querySelector('html');
+const headElement = document.querySelector('head');
+const enLink      = document.createElement('link');
+
+let storeLang     = localStorage.getItem('lang');
+
+
+
+changeLang.forEach( element =>
+    {
+        element.addEventListener('click', ()=>
+        {
+
+            if ( htmlElement.dir === 'rtl' )
+            {
+                htmlElement.dir = 'ltr';
+                element.querySelector('span').innerHTML = "Arabic";
+                headElement.append(enLink);
+            }
+            else
+            {
+                htmlElement.dir = 'rtl';
+                element.querySelector('span').innerHTML = "English";
+                headElement.removeChild(enLink)
+            }
+        });
+    });
